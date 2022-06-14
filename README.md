@@ -4,7 +4,7 @@
 
 <h1>Lý thuyết</h1>
 
-<img src= https://i.imgur.com/wC1TK1D.png align=right width=60%>
+<img src= https://i.imgur.com/wC1TK1D.png align=right width=45%>
 
 [1. Tổng quan về ảo hoá ](docs/01_Cloud_Computing.md)
 
