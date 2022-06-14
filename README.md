@@ -14,11 +14,13 @@
 
 [4. Tổng quan về KVM](docs/04-KVM%20Overview.md)
 
+[5. Cơ chế lưu trữ thin-think](docs/05_thin_thick.md)
+
 <h1>Thực hành</h1>
 
 [1. Cài đặt KVM trên CentOS/Ubuntu](docs/05_Install%20KVM%20centOS_Ubuntu.md)
 
-[2. Lệnh Virh](docs/05_Install%20KVM%20centOS_Ubuntu.md)
+[2. Lệnh Virt](docs/06_command_virsh.md)
 
 [3. Sử dụng virt-manager để quản lý VMs](docs/07_Using_Virt_Manager.md)
 
