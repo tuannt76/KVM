@@ -1,4 +1,16 @@
 # QEMU
+- [QEMU](#qemu)
+  - [**1) Giới thiệu**](#1-giới-thiệu)
+  - [**2) Cài đặt và cấu hình QEMU**](#2-cài-đặt-và-cấu-hình-qemu)
+    - [**2.1) Cài đặt trên Ubuntu**](#21-cài-đặt-trên-ubuntu)
+    - [**2.2) Cài đặt trên CentOS**](#22-cài-đặt-trên-centos)
+    - [**2.3) Cài đặt từ source**](#23-cài-đặt-từ-source)
+  - [**3) Quản lý các `disk-images`**](#3-quản-lý-các-disk-images)
+    - [**3.1) Kiểm tra các định dạng images được hỗ trợ** :](#31-kiểm-tra-các-định-dạng-images-được-hỗ-trợ-)
+    - [**3.2) Tạo images**](#32-tạo-images)
+    - [**3.3) Phân chia các partition**](#33-phân-chia-các-partition)
+    - [**3.4) Cài đặt OS**](#34-cài-đặt-os)
+      - [**3.4.1) Download images from Internet**](#341-download-images-from-internet)
 ## **1) Giới thiệu**
 - **Quick Emulator** ( **QEMU** ) là thành phần chính của bộ công nghệ ảo hóa **QEMU/KVM** .
 - Nó cung cấp giả lập về phần cứng cũng như các mô phỏng về CPU .
