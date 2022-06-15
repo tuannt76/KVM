@@ -7,7 +7,7 @@
 - Trong các nhu cầu nhỏ hơn, mỗi công nghệ sẽ được triển khai riêng biệt để đạt được những mục đích khác nhau . Theo nhiều cách khác nhau , **virtualization** và **cloud-computing** có thể giúp tiết kiệm các thiết bị đến mức tối thiểu, cũng như sử dụng chúng hiệu quả nhất .
 - Các doanh nghiệp hoặc người dùng các nhân thường sử dụng **cloud-computing** bằng cách thuê các dịch vụ **cloud-based** . Các nhà cung cấp dịch vụ **Cloud-Computing** lớn nhất hiện nay là **Microsoft (Azure)** và **Amazon (AWS - Amazon Web Services)**
 
-## 2.**Virtualization**
+## <h1>2.**Virtualization**</h1>
 
 - **Virtualization** là một công nghệ cho phép ta cài đặt nhiều hệ điều hành ( **OS** ) khác nhau trên cùng một phần cứng . Chúng hoàn toàn riêng rẽ và độc lập với nhau .
 - **Virtualization** ẩn các thông số của tài nguyên phần cứng khỏi các user, các ứng dụng của các OS hoặc người dùng quản lý từng OS . Điều này tương tự như việc biến một tài nguyên vật lý ( như server, hệ điều hành, một ứng dụng hoặc một thiết bị storage ) thành nhiều tài nguyên ảo .
@@ -44,7 +44,7 @@
 
     <img src=https://i.imgur.com/Y9ZryzR.png>
 
-## **3) Hypervisors**
+## <h1>**3) Hypervisors**</h1>
 - Một **hypervisor** là một dạng phần mềm cho phép hệ điều hành giao tiếp với phần cứng .
 - Chúng cũng được gọi là **Virtual Machine Monitor (VMM)** . 
 - **Hypervisor** tạo nên một nền tảng ảo hóa ( ***virtual platform*** ) trên máy chủ , và dựa trên đó các máy ảo hoạt động và được quản lý .

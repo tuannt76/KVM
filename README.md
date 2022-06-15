@@ -10,7 +10,7 @@
 
 [2. Qemu](docs/02_qemu.md)
 
-[3. Virtualization vs Hypervior là gì](docs/03_Virtualization_vs_Hypervior.md)
+[3. Virtualization vs Hypervior là gì](docs/03_Virtualization_vs_Hypervisor.md)
 
 [4. Tổng quan về KVM](docs/04-KVM%20Overview.md)
 
