@@ -1,5 +1,23 @@
 # Tổng quan về Virtualization và Hypervisor
 
+- [Tổng quan về Virtualization và Hypervisor](#tổng-quan-về-virtualization-và-hypervisor)
+  - [1. Sự khác biệt giữa virtualization vs Cloud](#1-sự-khác-biệt-giữa-virtualization-vs-cloud)
+  - [<h1>2.**Virtualization**</h1>](#h12virtualizationh1)
+    - [**2.1) Server Virtualization**](#21-server-virtualization)
+    - [**2.2) Desktop Virtualization**](#22-desktop-virtualization)
+    - [**2.3) Operating System Virtualization**](#23-operating-system-virtualization)
+    - [**2.4) Network functions Virtualization**](#24-network-functions-virtualization)
+    - [**2.5) Storage Virtualization**](#25-storage-virtualization)
+  - [<h1>**3) Hypervisors**</h1>](#h13-hypervisorsh1)
+    - [**3.1) Native of Bare Metal Hypervisor**](#31-native-of-bare-metal-hypervisor)
+    - [**3.2) Hosted Hypervisor**](#32-hosted-hypervisor)
+  - [**4) Hardware Virtualization**](#4-hardware-virtualization)
+    - [**4.1) Virtual CPU**](#41-virtual-cpu)
+    - [**4.2) Virtual Memory**](#42-virtual-memory)
+    - [**4.3) Virtual Storage**](#43-virtual-storage)
+    - [**4.4) Virtual Networking**](#44-virtual-networking)
+  - [5. Các thành phần và đặc điểm của một hệ thống ảo hóa](#5-các-thành-phần-và-đặc-điểm-của-một-hệ-thống-ảo-hóa)
+
 ## 1. Sự khác biệt giữa virtualization vs Cloud
 
 **Virtualization** là một trong các công nghệ nền tảng cho **Cloud-Computing** . Tuy nhiên, **virtualization** không phải là **Cloud-Computing** . **Cloud-Computing** là một dịch vụ mà các nhà cung cấp đưa đến người dùng dựa trên các mức giá khác nhau .
