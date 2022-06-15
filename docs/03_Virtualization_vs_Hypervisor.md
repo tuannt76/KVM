@@ -16,7 +16,7 @@
     - [**4.2) Virtual Memory**](#42-virtual-memory)
     - [**4.3) Virtual Storage**](#43-virtual-storage)
     - [**4.4) Virtual Networking**](#44-virtual-networking)
-  - [5. Các thành phần và đặc điểm của một hệ thống ảo hóa](#5-các-thành-phần-và-đặc-điểm-của-một-hệ-thống-ảo-hóa)
+  - [**5. Các thành phần và đặc điểm của một hệ thống ảo hóa**](#5-các-thành-phần-và-đặc-điểm-của-một-hệ-thống-ảo-hóa)
 
 ## 1. Sự khác biệt giữa virtualization vs Cloud
 
@@ -111,7 +111,7 @@
 
     <img src=https://i.imgur.com/r5ibIMe.png>
 
-## 5. Các thành phần và đặc điểm của một hệ thống ảo hóa
+## **5. Các thành phần và đặc điểm của một hệ thống ảo hóa**
 
 * **Tài nguyên vật lý** : Máy chủ vật lý, CPU, RAM, Ổ đĩa cứng, Card mạng.. Nhiệm vụ là chia tài nguyên cấp cho các máy ảo.
 * **Phần mềm ảo hóa**(Hypervisor): Cung cấp truy cập cho mỗi máy chủ ảo đến tài nguyên của máy chủ vật lý, Lập kế hoạch phân chia tài nguyên của máy chủ vật lý cho các máy chủ ảo.
