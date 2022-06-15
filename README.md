@@ -6,7 +6,7 @@
 
 <img src= https://i.imgur.com/wC1TK1D.png align=right width=45%>
 
-[1. Tổng quan về ảo hoá ](docs/01_Cloud_Computing.md)
+[1. Tổng quan về Cloud Computing ](docs/01_Cloud_Computing.md)
 
 [2. Qemu](docs/02_qemu.md)
 
