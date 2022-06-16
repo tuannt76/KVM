@@ -16,7 +16,7 @@
 
 [4. Tổng quan về KVM](docs/04_KVM_Overview.md)
 
-<h1>Thực hành và Lý thuyết,chức năng thành phầnKVM</h1>
+<h1>Lý thuyết và thực hành KVM </h1>
 
 [1. Cài đặt KVM trên CentOS/Ubuntu](docs/05_Install_KVM_centOS_Ubuntu.md)
 
