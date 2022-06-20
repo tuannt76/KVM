@@ -13,6 +13,10 @@
     # egrep -c "svm|vmx" /proc/cpuinfo
     4
     ```
+Nếu kết quả bằng 0 thì vào setting phần cài đặt tích chọn ô 1 và 2 hoặc 1 và 3,Như trong laptop hiện tại tích chọn 1 và 3  :
+
+![Imgur](https://i.imgur.com/SXDQw9V.png)
+
 - **B2 :** Cài đặt **KVM** và các gói liên quan :
     ```
     # yum install -y qemu-kvm libvirt bridge-utils virt-manager
@@ -30,61 +34,70 @@
 
 - **B4 :** Khởi động dịch vụ `libvirt` và cho phép khởi động cùng hệ thống :
     ```
-    # systemctl start libvirtd
-    # systemctl enable libvirtd
+    systemctl start libvirtd
+    systemctl enable libvirtd
     ```
 - **B5 :** Cài package `virt-install` để cài đặt máy ảo và `virt-viewer` để hiển thị quá trình tạo **VM** :
     ```
-    # yum install -y virt-install virt-viewer
+    yum install -y virt-install virt-viewer
     ```
     - Đối với **CentOS 7** bản **minimal** cần cài đặt thêm gói `x-window` để sử dụng được `virt-viewer` và `virt-manager` :
         ```
-        # yum install "@X Window System" xorg-x11-xauth xorg-x11-fonts-* xorg-x11-utils -y
+        yum install "@X Window System" xorg-x11-xauth xorg-x11-fonts-* xorg-x11-utils -y
         ```
 - **B6 :** Tạo 1 thư mục chứa file `.iso` để cài OS trong đường dẫn `/var/lib/libvirt/`
     ```
-    # cd /var/lib/libvirt/
-    # mkdir file-iso
+    cd /var/lib/libvirt/
+    mkdir file-iso
     ```
     - Tải về file iso của **CentOS 7 Minimal** vào thư mục này :
         ```
-        # cd file-iso
-        # yum install wget -y
-        # wget http://mirrors.nhanhoa.com/centos/7.7.1908/isos/x86_64/CentOS-7-x86_64-Minimal-1908.iso
+        cd file-iso
+        yum install wget -y
+        wget http://mirrors.nhanhoa.com/centos/7.7.1908/isos/x86_64/CentOS-7-x86_64-Minimal-1908.iso
         ```
-- **B7 :** Cài máy ảo với các thông số sau :
-    ```
-    # virt-install \
-    --name=CentOS7-01 \
-    --vcpus=1 \
-    --memory=512 \
-    --cdrom=/var/lib/libvirt/file-iso/CentOS-7-x86_64-Minimal-1908.iso \
-    --disk=/var/lib/libvirt/images/centos7-01.qcow2,size=10 \
-    --os-variant=rhel7 \
-    --network bridge=virbr0
-    ```
-    <img src=https://i.imgur.com/VPgU3Ih.png>
+- **B7 :** Tạo một card mạng Brigde
 
-    - Trong đó :
-        - `--name` :  tên của máy ảo
-        - `--vcpus` : số vCPU gán cho máy ảo
-        - `--memory` : lượng RAM cấp cho máy ảo ( đơn bị `MiB` )
-        - `--cdrom` : chỉ ra đường dẫn đến file `.iso` dùng để cài đặt OS . Nếu boot bằng cách khác dùng option `--location` sau đó chỉ ra đường dẫn đến file (có thể là đường dẫn đến file trên internet)
-        - `--disk, size` : chỉ ra vị trí lưu disk máy ảo với disk có size là bao nhiêu ( đơn vị `GiB` )
-        - `--os-variant` : loại OS đang tạo. Option này có thể chỉ ra hoặc không nhưng nên sử dụng nó vì nó sẽ cải thiện hiệu năng của máy ảo sau này. Nếu không biết HĐH bạn đang tạo thuộc loại nào, có thể tìm kiếm thông tin này bằng cách dùng lệnh `osinfo-query os`
-        - `--network` : loại mạng mà VM sử dụng
-> Quá trình này **KHÔNG ĐƯỢC** Cancel!
+Ta sẽ tạo 1 card Brigde ở chế độ NAT để khi tạo KVM sẽ gắn card mạng vào Bridge này:
+
+
+```
+nmcli connection add type bridge autoconnect yes con-name br0 ifname br0
+nmcli connection modify br0 ipv4.addresses 192.168.9.3/24 ipv4.method manual  
+nmcli connection modify br0 ipv4.gateway 192.168.9.2
+nmcli connection modify br0 ipv4.dns 8.8.8.8  
+nmcli connection delete ens33
+nmcli connection add type bridge-slave autoconnect yes con-name ens33 ifname ens33 master br0
+
+#restart network
+```
+
+- Nếu đang thực hiện SSH thì sẽ gõ dòng `` nmcli connection add type bridge-slave autoconnect yes con-name ens33 ifname ens33 master br0`` trên command của OS 
+
+
 - **B8 :** Mở một tab SSH khác tới server . Chạy lệnh `virt-manager` để vào trình quản lý cài đặt máy ảo KVM :
     ```
-    # virt-manager
+    virt-manager
     ```
-- **B9 :** Trình quản lý virt-manager hiện lên, chọn vào máy ảo vừa tạo :
+- **B9 :** Trình quản lý ``virt-manager`` hiện lên tiến hành cài đặt máy áo và thiết lập các thông số theo ý muốn :
 
-    <img src=https://i.imgur.com/2QP5Sgm.png>
+**<h2>Lần lượt làm theo các bước sau để tạo 1 máy ảo :</h2>**
+
+
+![Imgur](https://i.imgur.com/tTfQcck.png)
+![Imgur](https://i.imgur.com/qF7EqAw.png)
+![Imgur](https://i.imgur.com/J5zCDfp.png)
+![Imgur](https://i.imgur.com/bsHV8ve.png)
+![Imgur](https://i.imgur.com/ujVXVq6.png)
+![Imgur](https://i.imgur.com/OGWsuj5.png)
+![Imgur](https://i.imgur.com/HXDkCwg.png)
+
+ 
 
 - **B10 :** Cài đặt máy ảo như bình thường :
 
-    <img src=https://i.imgur.com/1tN0aBf.png>
+  
+    ![Imgur](https://i.imgur.com/8V0QInE.png)
 
 ## **2) Cài đặt trên Ubuntu**
 - **B1 :** Chuyển đổi sang user `root` :
