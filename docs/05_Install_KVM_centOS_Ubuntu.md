@@ -164,7 +164,7 @@ nmcli connection add type bridge-slave autoconnect yes con-name ens33 ifname ens
     ```
 - **B8 :** Trình quản lý virt-manager hiện lên, chọn vào máy ảo vừa tạo :
 
-    <img src=https://i.imgur.com/C0ce7PG.png>
+    ![Imgur](https://i.imgur.com/9BAgRRs.png)
 
 - **B9 :** Cài đặt máy ảo như bình thường :
 
