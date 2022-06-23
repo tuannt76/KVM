@@ -10,7 +10,7 @@
 
 [1. Tổng quan về Cloud Computing ](docs/01_Cloud_Computing.md)
 
-[2. Qemu](docs/02_qemu.md)
+
 
 [3. Virtualization vs Hypervior là gì](docs/03_Virtualization_vs_Hypervisor.md)
 
