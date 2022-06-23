@@ -1,3 +1,10 @@
+- [Sử dụng `virsh`](#sử-dụng-virsh)
+  - [**1) Libvirt và `virsh`**](#1-libvirt-và-virsh)
+  - [**2) Các lệnh cơ bản với `virsh`**](#2-các-lệnh-cơ-bản-với-virsh)
+  - [**3) Các lệnh kiểm tra thông tin**](#3-các-lệnh-kiểm-tra-thông-tin)
+  - [**4) Các thao tác Clone**](#4-các-thao-tác-clone)
+  - [**5) Các thao tác Snapshot**](#5-các-thao-tác-snapshot)
+  - [**6) Console máy ảo**](#6-console-máy-ảo)
 # Sử dụng `virsh`
 ## **1) Libvirt và `virsh`**
 - **Libvirt** là một bộ các phần mềm mà cung cấp các cách thuận tiện để quản lý máy ảo và các chức năng của ảo hóa. Những phần mềm này bao gồm một thư viện API daemon (`libvirtd`) và các gói tiện tích giao diện dòng lệnh (`virsh`) .

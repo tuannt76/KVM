@@ -83,13 +83,18 @@ nmcli connection add type bridge-slave autoconnect yes con-name ens33 ifname ens
 
 **<h2>Lần lượt làm theo các bước sau để tạo 1 máy ảo :</h2>**
 
-
+1
 ![Imgur](https://i.imgur.com/tTfQcck.png)
+2
 ![Imgur](https://i.imgur.com/qF7EqAw.png)
+3
 ![Imgur](https://i.imgur.com/J5zCDfp.png)
+4
 ![Imgur](https://i.imgur.com/bsHV8ve.png)
+5
 ![Imgur](https://i.imgur.com/ujVXVq6.png)
-![Imgur](https://i.imgur.com/OGWsuj5.png)
+6
+!7
 ![Imgur](https://i.imgur.com/HXDkCwg.png)
 
  
@@ -102,7 +107,7 @@ nmcli connection add type bridge-slave autoconnect yes con-name ens33 ifname ens
 ## **2) Cài đặt trên Ubuntu**
 - **B1 :** Chuyển đổi sang user `root` :
     ```
-    cuongnq@ubuntu1804~$: sudo -i
+    tuannguyen@ubuntu1804~$: sudo -i
     root@ubuntu1804:~#
     ```
 - **B2 :** Kiểm tra xem **CPU** có hỗ trợ ảo hóa không bằng lệnh sau . Nếu kết quả trả về khác `0` có nghĩa là **CPU** có hỗ trợ :
@@ -119,7 +124,7 @@ nmcli connection add type bridge-slave autoconnect yes con-name ens33 ifname ens
     ```
     # lsmod | grep kvm
     ```
-    <img src=https://i.imgur.com/rhx0nF1.png>
+    ![Imgur](https://i.imgur.com/um4c1Ye.png)
 
 - **B5 :** Tạo 1 thư mục chứa file `.iso` để cài OS trong đường dẫn `/var/lib/libvirt/`
     ```
