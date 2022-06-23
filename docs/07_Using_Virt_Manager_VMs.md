@@ -1,11 +1,23 @@
 # Sử dụng `virt-manager` để quản lý VMs
 
+Đối với bản Minimal thì để sử dụng công cụ đồ họa virt-manager, ta cần cài đặt gói X-Window
+
+```
+yum install -y "@X Window System" xorg-x11-xauth xorg-x11-fonts-* xorg-x11-utils
+```
+
 - Giao diện của `virt-manager` :
 
-   ![Imgur](https://i.imgur.com/9BAgRRs.png)
+![Imgur](https://i.imgur.com/9BAgRRs.png)
 
 ## **1) Tạo VM mới**
 - **B1 :** Trên thanh công cụ, chọn ***File*** -> ***New Virtual Machine*** :
+
+Trên máy KVM gõ lệnh :
+
+```
+Virt-manage
+```
 
     ![Imgur](https://i.imgur.com/tTfQcck.png)
 
