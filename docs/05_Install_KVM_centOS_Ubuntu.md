@@ -75,34 +75,35 @@ nmcli connection add type bridge-slave autoconnect yes con-name ens33 ifname ens
 - Nếu đang thực hiện SSH thì sẽ gõ dòng `` nmcli connection add type bridge-slave autoconnect yes con-name ens33 ifname ens33 master br0`` trên command của OS 
 
 
-- **B8 :** Mở một tab SSH khác tới server . Chạy lệnh `virt-manager` để vào trình quản lý cài đặt máy ảo KVM :
+- **B8 :** Cài máy ảo với các thông số sau :
+
+    ```
+    virt-install \
+    --name=CentOS7-01 \
+    --vcpus=1 \
+    --memory=512 \
+    --cdrom=/var/lib/libvirt/file-iso/CentOS-7-x86_64-Minimal-1908.iso \
+    --disk=/var/lib/libvirt/images/centos7-01.qcow2,size=10 \
+    --os-variant=rhel7 \
+    --network bridge=virbr0
+    ```
+     ![Imgur](https://i.imgur.com/Zg4jQ1k.png)
+
+    - Trong đó :
+        - `--name` :  tên của máy ảo
+        - `--vcpus` : số vCPU gán cho máy ảo
+        - `--memory` : lượng RAM cấp cho máy ảo ( đơn bị `MiB` )
+        - `--cdrom` : chỉ ra đường dẫn đến file `.iso` dùng để cài đặt OS . Nếu boot bằng cách khác dùng option `--location` sau đó chỉ ra đường dẫn đến file (có thể là đường dẫn đến file trên internet)
+        - `--disk, size` : chỉ ra vị trí lưu disk máy ảo với disk có size là bao nhiêu ( đơn vị `GiB` )
+        - `--os-variant` : loại OS đang tạo. Option này có thể chỉ ra hoặc không nhưng nên sử dụng nó vì nó sẽ cải thiện hiệu năng của máy ảo sau này. Nếu không biết HĐH bạn đang tạo thuộc loại nào, có thể tìm kiếm thông tin này bằng cách dùng lệnh `osinfo-query os`
+        - `--network` : loại mạng mà VM sử dụng
+
+-  Mở một tab SSH khác tới server . Chạy lệnh `virt-manager` để vào trình quản lý cài đặt máy ảo KVM :
     ```
     virt-manager
     ```
-- **B9 :** Trình quản lý ``virt-manager`` hiện lên tiến hành cài đặt máy áo và thiết lập các thông số theo ý muốn :
-
-**<h2>Lần lượt làm theo các bước sau để tạo 1 máy ảo :</h2>**
-
-1
-![Imgur](https://i.imgur.com/tTfQcck.png)
-2
-![Imgur](https://i.imgur.com/qF7EqAw.png)
-3
-![Imgur](https://i.imgur.com/J5zCDfp.png)
-4
-![Imgur](https://i.imgur.com/bsHV8ve.png)
-5
-![Imgur](https://i.imgur.com/ujVXVq6.png)
-6
-!7
-![Imgur](https://i.imgur.com/HXDkCwg.png)
-
- 
-
-- **B10 :** Cài đặt máy ảo như bình thường :
-
-  
-    ![Imgur](https://i.imgur.com/8V0QInE.png)
+![Imgur](https://i.imgur.com/o3dFVoU.png)
+![Imgur](https://i.imgur.com/9BAgRRs.png)
 
 ## **2) Cài đặt trên Ubuntu**
 - **B1 :** Chuyển đổi sang user `root` :
@@ -142,11 +143,12 @@ nmcli connection add type bridge-slave autoconnect yes con-name ens33 ifname ens
     --name=Centos7-test \
     --vcpus=1 \
     --memory=512 \
-    --cdrom=/var/lib/libvirt/file-iso/CentOS-7-x86_64-Minimal-1908.iso \
+    --cdrom=/var/lib/libvirt/file-iso/CentOS-7-x86_64-Minimal-2009.iso \
     --disk=/var/lib/libvirt/images/centos7-test,size=3 \
     --os-variant=rhel7 \
     --network bridge=virbr0
     ```
+    ![Imgur](https://i.imgur.com/Zg4jQ1k.png)
     - Trong đó:
         - `--name` : tên cho máy ảo
         - `--vcpus` : số vCPU cấp cho máy ảo
