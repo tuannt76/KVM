@@ -56,22 +56,19 @@ Nếu kết quả bằng 0 thì vào setting phần cài đặt tích chọn ô 
         yum install wget -y
         wget http://mirrors.nhanhoa.com/centos/7.7.1908/isos/x86_64/CentOS-7-x86_64-Minimal-2009.iso
         ```
-
-
-
 - **B7 :** Cài máy ảo với các thông số sau :
 
     ```
     virt-install \
-    --name=CentOS7-01 \
+    --name=c776-kvm \
     --vcpus=1 \
     --memory=512 \
     --cdrom=/var/lib/libvirt/file-iso/CentOS-7-x86_64-Minimal-2009.iso \
-    --disk=/var/lib/libvirt/images/centos7-01.qcow2,size=10 \
+    --disk=/var/lib/libvirt/images/c776-kvm.qcow2,size=10 \
     --os-variant=rhel7 \
     --network bridge=virbr0
     ```
-     ![Imgur](https://i.imgur.com/Zg4jQ1k.png)
+     ![Imgur](https://i.imgur.com/ZBJo4Yo.png)
 
     - Trong đó :
         - `--name` :  tên của máy ảo
@@ -82,12 +79,25 @@ Nếu kết quả bằng 0 thì vào setting phần cài đặt tích chọn ô 
         - `--os-variant` : loại OS đang tạo. Option này có thể chỉ ra hoặc không nhưng nên sử dụng nó vì nó sẽ cải thiện hiệu năng của máy ảo sau này. Nếu không biết HĐH bạn đang tạo thuộc loại nào, có thể tìm kiếm thông tin này bằng cách dùng lệnh `osinfo-query os`
         - `--network` : loại mạng mà VM sử dụng
 
--  Mở một tab SSH khác tới server . Chạy lệnh `virt-manager` để vào trình quản lý cài đặt máy ảo KVM :
+**B8 :** Mở một tab SSH khác tới server . Chạy lệnh `virt-manager` để vào trình quản lý cài đặt máy ảo KVM :
+
     ```
     virt-manager
     ```
+**B9** : Ta tiến hành cài đặt máy OS CentOS bình thường :
+
 ![Imgur](https://i.imgur.com/o3dFVoU.png)
 ![Imgur](https://i.imgur.com/9BAgRRs.png)
+![Imgur](https://i.imgur.com/AuED87T.png)
+![Imgur](https://i.imgur.com/17GoeXD.png)
+Quá trình cài đặt hoàn tất :
+
+![Imgur](https://i.imgur.com/VWgIOcP.png)
+
+ **Ở tab cài đặt trước đó** cũng thông báo quá trình cài đặt hoàn tất :
+
+![Imgur](https://i.imgur.com/3cfCm9s.png)
+
 
 ## **2) Cài đặt trên Ubuntu**
 - **B1 :** Chuyển đổi sang user `root` :
@@ -123,12 +133,12 @@ Nếu kết quả bằng 0 thì vào setting phần cài đặt tích chọn ô 
         ```
 - **B6 :** Cài máy ảo với các thông số sau :
     ```
-    # virt-install \
-    --name=Centos7-test \
+    virt-install \
+    --name=Centos7-vm \
     --vcpus=1 \
     --memory=512 \
     --cdrom=/var/lib/libvirt/file-iso/CentOS-7-x86_64-Minimal-2009.iso \
-    --disk=/var/lib/libvirt/images/centos7-test,size=3 \
+    --disk=/var/lib/libvirt/images/Centos7-vm,size=3 \
     --os-variant=rhel7 \
     --network bridge=virbr0
     ```
@@ -148,11 +158,12 @@ Nếu kết quả bằng 0 thì vào setting phần cài đặt tích chọn ô 
     ```
 - **B8 :** Trình quản lý virt-manager hiện lên, chọn vào máy ảo vừa tạo :
 
-    ![Imgur](https://i.imgur.com/9BAgRRs.png)
+    ![Imgur](https://i.imgur.com/hufaFfO.png)
 
 - **B9 :** Cài đặt máy ảo như bình thường :
 
-    <img src=https://i.imgur.com/fQqrk1i.png>
+    ![Imgur](https://i.imgur.com/AuED87T.png)
+    ![Imgur](https://i.imgur.com/17GoeXD.png)
 
 ## **3) Các thư mục quan trọng trong KVM**
 - `/var/lib/libvirt/images/` : thư mục lưu các disk của VM

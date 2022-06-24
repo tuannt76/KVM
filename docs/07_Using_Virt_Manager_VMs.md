@@ -1,5 +1,10 @@
 # Sử dụng `virt-manager` để quản lý VMs
 
+- [Sử dụng `virt-manager` để quản lý VMs](#sử-dụng-virt-manager-để-quản-lý-vms)
+  - [**1) Tạo VM mới**](#1-tạo-vm-mới)
+  - [**2) Snapshot**](#2-snapshot)
+  - [**3) Xem và sửa thông tin hardware của VM**](#3-xem-và-sửa-thông-tin-hardware-của-vm)
+
 Đối với bản Minimal thì để sử dụng công cụ đồ họa virt-manager, ta cần cài đặt gói X-Window
 
 ```
