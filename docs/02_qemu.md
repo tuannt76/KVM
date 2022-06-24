@@ -57,7 +57,7 @@
     ```
 > Các công cụ được thêm vào sau khi cài **QEMU** :
 
-<img src=https://i.imgur.com/PSvs5eJ.png>
+**ảnh**
 
 ## **3) Quản lý các `disk-images`**
 - Để chạy các máy ảo, **QEMU** cần các **images** để lưu trữ hệ thống filesystem của các **guest OS** .
