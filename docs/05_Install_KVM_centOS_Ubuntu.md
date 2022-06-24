@@ -11,7 +11,7 @@
 - **B1 :** Kiểm tra xem **CPU** có hỗ trợ ảo hóa không bằng lệnh sau . Nếu kết quả trả về khác `0` có nghĩa là **CPU** có hỗ trợ :
     ```
     # egrep -c "svm|vmx" /proc/cpuinfo
-    4
+    2
     ```
 Nếu kết quả bằng 0 thì vào setting phần cài đặt tích chọn ô 1 và 2 hoặc 1 và 3,Như trong laptop hiện tại tích chọn 1 và 3  :
 
@@ -30,7 +30,7 @@ Nếu kết quả bằng 0 thì vào setting phần cài đặt tích chọn ô 
     ```
     # lsmod | grep kvm
     ```
-    <img src=https://i.imgur.com/bnXe8aw.png>
+    ![Imgur](https://i.imgur.com/WaIppS9.png)
 
 - **B4 :** Khởi động dịch vụ `libvirt` và cho phép khởi động cùng hệ thống :
     ```
@@ -54,35 +54,19 @@ Nếu kết quả bằng 0 thì vào setting phần cài đặt tích chọn ô 
         ```
         cd file-iso
         yum install wget -y
-        wget http://mirrors.nhanhoa.com/centos/7.7.1908/isos/x86_64/CentOS-7-x86_64-Minimal-1908.iso
+        wget http://mirrors.nhanhoa.com/centos/7.7.1908/isos/x86_64/CentOS-7-x86_64-Minimal-2009.iso
         ```
-- **B7 :** Tạo một card mạng Brigde
-
-Ta sẽ tạo 1 card Brigde ở chế độ NAT để khi tạo KVM sẽ gắn card mạng vào Bridge này:
 
 
-```
-nmcli connection add type bridge autoconnect yes con-name br0 ifname br0
-nmcli connection modify br0 ipv4.addresses 192.168.9.3/24 ipv4.method manual  
-nmcli connection modify br0 ipv4.gateway 192.168.9.2
-nmcli connection modify br0 ipv4.dns 8.8.8.8  
-nmcli connection delete ens33
-nmcli connection add type bridge-slave autoconnect yes con-name ens33 ifname ens33 master br0
 
-#restart network
-```
-
-- Nếu đang thực hiện SSH thì sẽ gõ dòng `` nmcli connection add type bridge-slave autoconnect yes con-name ens33 ifname ens33 master br0`` trên command của OS 
-
-
-- **B8 :** Cài máy ảo với các thông số sau :
+- **B7 :** Cài máy ảo với các thông số sau :
 
     ```
     virt-install \
     --name=CentOS7-01 \
     --vcpus=1 \
     --memory=512 \
-    --cdrom=/var/lib/libvirt/file-iso/CentOS-7-x86_64-Minimal-1908.iso \
+    --cdrom=/var/lib/libvirt/file-iso/CentOS-7-x86_64-Minimal-2009.iso \
     --disk=/var/lib/libvirt/images/centos7-01.qcow2,size=10 \
     --os-variant=rhel7 \
     --network bridge=virbr0
