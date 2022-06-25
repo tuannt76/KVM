@@ -1,7 +1,7 @@
 # Sử dụng Webvirt Manager để quản lý các VMs
 ## **1) Cài đặt Webvirt Manager trên CentOS 7**
 ### **Mô hình**
-<img src=https://i.imgur.com/vRKA3Sf.png>
+
 
 ### **Cài đặt KVM Computes**
 - **B1 :** Trên máy **KVM Computes** , cài đặt KVM để quản lý qua **Webvirt Cloud**<br>[Hướng dẫn cài đặt KVM trên CentOS 7](https://github.com/QuocCuong97/Linux/blob/master/docs/KVM/03_Install_KVM.md#1-c%C3%A0i-%C4%91%E1%BA%B7t-tr%C3%AAn-centos-7)
