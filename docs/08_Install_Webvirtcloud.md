@@ -160,8 +160,6 @@
     # systemctl restart nginx && systemctl restart supervisord
     # systemctl enable nginx && systemctl enable supervisord
     ```
-- **B15 :** Trên trình duyệt của client , truy cập địa chỉ của **WebvirtCloud**, login với user mặc định : `admin/admin` :
-    ```
-    http://192.168.5.20
-    ```
+- **B15 :** Trên trình duyệt của client , truy cập địa chỉ của 
+
   
