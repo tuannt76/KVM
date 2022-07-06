@@ -60,30 +60,6 @@
 
             <img src=https://i.imgur.com/OiKLGQE.png>
 
-## **4) Test performance giữa 2 định dạng**
-- **VD :** Thực hiện các lệnh sau :
-    ```
-    # dd if=/var/lib/libvirt/images/centos7-02.qcow2 of=test1 bs=10k count=100000
-    19+1 records in
-    19+1 records out
-    197120 bytes (197 kB) copied, 0.00151936 s, 130 MB/s
-
-    # dd if=/var/lib/libvirt/images/centos7-02.raw of=test2 bs=10k count=100000
-    100000+0 records in
-    100000+0 records out
-    1024000000 bytes (1.0 GB) copied, 4.05949 s, 252 MB/s
-    ```
-    ```
-    # dd if=/dev/zero of=/var/lib/libvirt/images/centos7-02.qcow2 bs=10k count=100000
-    100000+0 records in
-    100000+0 records out
-    1024000000 bytes (1.0 GB) copied, 1.39972 s, 732 MB/s
-
-    # dd if=/dev/zero of=/var/lib/libvirt/images/centos7-02.raw bs=10k count=100000
-    100000+0 records in
-    100000+0 records out
-    1024000000 bytes (1.0 GB) copied, 1.24782 s, 821 MB/s
-    ```
 
 
 
