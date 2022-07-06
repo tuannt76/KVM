@@ -3,7 +3,6 @@
 - [Cài đặt KVM bằng libvirt](#cài-đặt-kvm-bằng-libvirt)
   - [**1) Cài đặt trên CentOS 7**](#1-cài-đặt-trên-centos-7)
   - [**2) Cài đặt trên Ubuntu**](#2-cài-đặt-trên-ubuntu)
-  - [**3) Các thư mục quan trọng trong KVM**](#3-các-thư-mục-quan-trọng-trong-kvm)
   
 # Cài đặt KVM bằng libvirt
 
@@ -165,23 +164,3 @@ Quá trình cài đặt hoàn tất :
     ![Imgur](https://i.imgur.com/AuED87T.png)
     ![Imgur](https://i.imgur.com/17GoeXD.png)
 
-## **3) Các thư mục quan trọng trong KVM**
-- `/var/lib/libvirt/images/` : thư mục lưu các disk của VM
-
-    <img src=https://i.imgur.com/tvcNMuB.png>
-
-- `/etc/libvirt/qemu/` : thư mục chứa các file `.xml` thông số kĩ thuật của VM :
-
-    <img src=https://i.imgur.com/VM764Ga.png>
-
-- `/etc/libvirt/qemu/networks/` : thư mục chứa các file liên quan đến network :
-
-    <img src=https://i.imgur.com/jDLr58K.png>
-
-- `/etc/libvirt/storage/` : thư mục lưu các file cấu hình storage pool :
-
-    <img src=https://i.imgur.com/G813Cwt.png>
-
-- `/var/lib/libvirt/qemu/snapshot/` : thư mục lưu các bản snapshot của các VM :
-
-    <img src=https://i.imgur.com/DxIIyDe.png>

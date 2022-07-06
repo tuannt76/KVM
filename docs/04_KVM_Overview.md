@@ -1,4 +1,9 @@
 # Tổng quan về KVM
+
+- [Tổng quan về KVM](#tổng-quan-về-kvm)
+  - [**1) Giới thiệu**](#1-giới-thiệu)
+  - [**2) Cấu trúc của KVM**](#2-cấu-trúc-của-kvm)
+
 ## **1) Giới thiệu**
 - **KVM** - **Kernel-based Virtual Machine** là giải pháp ảo hóa cho hệ thống Linux trên nền tảng phần cứng `x86` cho các module mở rộng hỗ trợ ảo hóa ( **Intel VT-x** hoặc **AMD-V** ) .
 - **KVM** không thực sự là một **hypervisor** có chức năng giả lập phần cứng để chạy các máy ảo mà chỉ là một module của kernel linux hỗ trợ cơ chế mapping các chỉ dẫn trên CPU ảo (của guest VM) sang chỉ dẫn trên CPU vật lý (của máy chủ chứa VM) .
