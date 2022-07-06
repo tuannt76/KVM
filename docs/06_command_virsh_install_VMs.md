@@ -7,7 +7,8 @@
   - [**6) Console máy ảo**](#6-console-máy-ảo)
 # Sử dụng `virsh`
 ## **1) Libvirt và `virsh`**
-- **Libvirt** là một bộ các phần mềm mà cung cấp các cách thuận tiện để quản lý máy ảo và các chức năng của ảo hóa. Những phần mềm này bao gồm một thư viện API daemon (`libvirtd`) và các gói tiện tích giao diện dòng lệnh (`virsh`) .
+- **Libvirt** là một bộ các phần mềm mà cung cấp các cách thuận tiện để quản lý máy ảo và các chức năng của ảo hóa. 
+
 - `virsh` là một tools kiểm soát và thực hiện hành động với các máy ảo .
 ## **2) Các lệnh cơ bản với `virsh`**
 - Show tất cả các máy ảo đã được cài đặt :
@@ -115,13 +116,13 @@
 ## **5) Các thao tác Snapshot**
 - Tạo snapshot :
     ```
-    # virsh snapshot-create-as --domain CentOS7-01 --name "Begin" --description "ban khoi tao"
+    # virsh snapshot-create-as --domain CentOS7-01 --name "Begin" --description "Test Snapshot"
     ```
     <img src=https://i.imgur.com/mm6fPJl.png>
 
 - Show các bản snapshot đã tạo :
     ```
-    # virsh snapshot-list CentOS7-01
+    # virsh snapshot-list CentOS7-KVM
     ```
     <img src=https://i.imgur.com/vgWrwM7.png>
 
@@ -151,7 +152,7 @@
     ```
     # virsh console CentOS7-01
     ```
-    <img src=https://i.imgur.com/kvXdQwa.png>
+    ![Imgur](https://i.imgur.com/I1ZYrjc.png)
     
     > Gõ `Ctrl` + `]` để thoát phiên console
     

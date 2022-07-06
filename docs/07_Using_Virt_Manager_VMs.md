@@ -58,23 +58,17 @@ Virt-manage
 
 - **B2 :** Chọn biểu tượng dấu "+" ở dưới góc trái màn hình để tạo snapshot :
 
-    <img src=https://i.imgur.com/Gz06Ps4.png>
+   ![Imgur](https://i.imgur.com/3BfA83a.png)
 
-- **B3 :** Tại option ***Name*** , đặt tên cho bản snapshot -> ***Finish*** :
 
-    <img src=https://i.imgur.com/40eVFV4.png>
 
     => Kết quả sau khi tạo :
 
-    <img src=https://i.imgur.com/tTmBYan.png>
+    ![Imgur](https://i.imgur.com/kksHmW8.png)
 
-- **B4 :** Chọn biểu tượng ... để reverse bản snapshot :
+- **B4 :** Chọn biểu tượng ... để xóa bản snapshot :
 
-    <img src=https://i.imgur.com/kG3bhv1.png>
-
-- **B5 :** Chọn biểu tượng ... để xóa bản snapshot :
-
-    <img src=https://i.imgur.com/BntUP7s.png>
+    ![Imgur](https://i.imgur.com/XkMuHa2.png)
 
 ## **3) Xem và sửa thông tin hardware của VM**
 - **B1 :** Trên cửa sổ của máy ảo đang bật, chọn vào biểu tượng info trên thanh công cụ :
@@ -86,4 +80,4 @@ Virt-manage
     <img src=https://i.imgur.com/TxaxlIs.png>
 
     > Lưu ý : Phải tắt máy ảo trước khi sửa đổi thông tin
-- **B9 :** Trình quản lý ``virt-manager`` hiện lên tiến hành cài đặt máy áo và thiết lập các thông số theo ý muốn :
+

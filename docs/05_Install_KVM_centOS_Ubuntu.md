@@ -1,5 +1,4 @@
 
-
 - [Cài đặt KVM bằng libvirt](#cài-đặt-kvm-bằng-libvirt)
   - [**1) Cài đặt trên CentOS 7**](#1-cài-đặt-trên-centos-7)
   - [**2) Cài đặt trên Ubuntu**](#2-cài-đặt-trên-ubuntu)
