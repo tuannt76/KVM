@@ -4,7 +4,6 @@
   - [**3) Các lệnh kiểm tra thông tin**](#3-các-lệnh-kiểm-tra-thông-tin)
   - [**4) Các thao tác Clone**](#4-các-thao-tác-clone)
   - [**5) Các thao tác Snapshot**](#5-các-thao-tác-snapshot)
-  - [**6) Console máy ảo**](#6-console-máy-ảo)
 # Sử dụng `virsh`
 ## **1) Libvirt và `virsh`**
 - **Libvirt** là một bộ các phần mềm mà cung cấp các cách thuận tiện để quản lý máy ảo và các chức năng của ảo hóa. 
@@ -142,18 +141,3 @@
     ```
     <img src=https://i.imgur.com/FZl4vFU.png>
 
-## **6) Console máy ảo**
-- **B1 :** Khởi động dịch vụ **TRÊN CÁC MÁY ẢO** để cho phép máy chủ KVM console không cần mật khẩu :
-    ```
-    # systemctl start serial-getty@ttyS0.service
-    # systemctl enable serial-getty@ttyS0.service
-    ```
-- **B2 :** Trên host KVM, thực hiện lệnh :
-    ```
-    # virsh console CentOS7-01
-    ```
-    ![Imgur](https://i.imgur.com/I1ZYrjc.png)
-    
-    > Gõ `Ctrl` + `]` để thoát phiên console
-    
-    > Từ phiên console thứ 2 sẽ không cần phải đăng nhập user và password nữa
