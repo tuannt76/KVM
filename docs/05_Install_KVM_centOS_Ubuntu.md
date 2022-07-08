@@ -140,7 +140,9 @@ Quá trình cài đặt hoàn tất :
     --os-variant=rhel7 \
     --network bridge=virbr0
     ```
-    ![Imgur](https://i.imgur.com/Zg4jQ1k.png)
+
+![Imgur](https://i.imgur.com/Zg4jQ1k.png)
+
     - Trong đó:
         - `--name` : tên cho máy ảo
         - `--vcpus` : số vCPU cấp cho máy ảo
