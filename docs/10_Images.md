@@ -1,6 +1,15 @@
 # Tìm Hiểu Images trong KVM 
 
-## # File image trong KVM
+- [Tìm Hiểu Images trong KVM](#tìm-hiểu-images-trong-kvm)
+  - [File image trong KVM](#file-image-trong-kvm)
+  - [**1) Tổng quan về file image trong KVM**](#1-tổng-quan-về-file-image-trong-kvm)
+  - [**2) Các định dạng image phổ biến**](#2-các-định-dạng-image-phổ-biến)
+    - [**2.1) `.iso`**](#21-iso)
+    - [**2.2) `.raw`**](#22-raw)
+    - [**2.3) `.qcow2`**](#23-qcow2)
+  - [**3) Chuyển đổi định dạng giữa `.raw` và `.qcow2`**](#3-chuyển-đổi-định-dạng-giữa-raw-và-qcow2)
+
+##  File image trong KVM
 ## **1) Tổng quan về file image trong KVM**
 - Images là loại file đóng gói hết tất cả nội dung của 1 đĩa CD/DVD bên trong .
 - Trong KVM Guest có 2 thành phần chính:
