@@ -1,6 +1,9 @@
 # Tìm hiểu XML Domain file và tạo VM bằng file XML
 
-
+- [Tìm hiểu XML Domain file và tạo VM bằng file XML](#tìm-hiểu-xml-domain-file-và-tạo-vm-bằng-file-xml)
+	- [**1) Giới thiệu về file XML**](#1-giới-thiệu-về-file-xml)
+	- [**2) Các thành phần trong XML Domain file**](#2-các-thành-phần-trong-xml-domain-file)
+	- [**2) Cách tạo máy ảo bằng 1 file `.xml`**](#2-cách-tạo-máy-ảo-bằng-1-file-xml)
 
 ## **1) Giới thiệu về file XML**
 
