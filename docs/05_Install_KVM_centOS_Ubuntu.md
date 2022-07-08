@@ -141,7 +141,7 @@ Quá trình cài đặt hoàn tất :
     --network bridge=virbr0
     ```
 
-![Imgur](https://i.imgur.com/Zg4jQ1k.png)
+![Imgur](https://i.imgur.com/ZBJo4Yo.png)
 
     - Trong đó:
         - `--name` : tên cho máy ảo
