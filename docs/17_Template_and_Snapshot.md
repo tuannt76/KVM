@@ -1,4 +1,16 @@
 # Template và Snapshot
+
+- [Template và Snapshot](#template-và-snapshot)
+  - [**1) Template trong KVM**](#1-template-trong-kvm)
+    - [**1.1) Giới thiệu**](#11-giới-thiệu)
+    - [**1.2) Tạo và quản lý template**](#12-tạo-và-quản-lý-template)
+    - [**1.3) Lab tạo Template**](#13-lab-tạo-template)
+      - [**Tạo template**](#tạo-template)
+      - [**Sử dụng template**](#sử-dụng-template)
+  - [**2) Snapshot trong KVM**](#2-snapshot-trong-kvm)
+    - [**2.1) Tạo và quản lí Internal Snapshot**](#21-tạo-và-quản-lí-internal-snapshot)
+    - [**2.2) Tạo và quản lí External Snapshot**](#22-tạo-và-quản-lí-external-snapshot)
+
 ## **1) Template trong KVM**
 ### **1.1) Giới thiệu**
 - **Template** là một dạng file image pre-configured của hệ điều hành được dùng để tạo nhanh các máy ảo . 
